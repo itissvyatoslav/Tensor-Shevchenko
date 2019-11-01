@@ -106,6 +106,9 @@ class Console {
         print("Write car model: ", separator: "", terminator: "")
         let carModel = getString()
         
+        if storage.cars.isEmpty {
+            storage.addCar(Car(name: carName, year: carYear, model: carModel))
+        } else {
         print("Do you want to place at certain index?")
         var funcWorked = true
         while funcWorked{
@@ -123,6 +126,7 @@ class Console {
             default:
                 print("Write the correct answer")
             }
+        }
         }
     }
     
