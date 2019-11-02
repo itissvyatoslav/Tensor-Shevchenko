@@ -122,7 +122,6 @@ class Console {
             case "no":
                 storage.addCar(Car(name: carName, year: carYear, model: carModel))
                 funcWorked = false
-                break
             default:
                 print("Write the correct answer")
             }
